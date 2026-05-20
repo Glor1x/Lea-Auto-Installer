@@ -1,0 +1,33 @@
+{
+	"productName": "LEA Installer",
+	"version": "1.0.0",
+	"identifier": "com.lea.installer",
+	"build": {
+		"frontendDist": "../ui"
+	},
+	"app": {
+		"withGlobalTauri": true,
+		"windows": [
+			{
+				"title": "LEA Installer",
+				"width": 600,
+				"height": 600,
+				"minWidth": 500,
+				"minHeight": 550,
+				"resizable": false,
+				"decorations": false,
+				"center": true,
+				"visible": false
+			}
+		],
+		"security": {
+			"csp": null
+		}
+	},
+	"bundle": {
+		"active": true,
+		"icon": ["icons/icon.ico"],
+		"targets": "all",
+		"windows": {}
+	}
+}
