@@ -58,8 +58,6 @@ This project demonstrates:
 
 <img src="assets/screen-done.png" width="400"/>
 
-*(Replace with real screenshots or GIFs)*
-
 ---
 
 # 🧠 Architecture
