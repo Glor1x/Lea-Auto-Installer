@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LEA Installer</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<canvas id="particles"></canvas>
+
+		<div class="app">
+			<header class="header">
+				<div class="logo">
+					<span class="logo-text">LEA</span>
+				</div>
+				<div class="header-actions">
+					<button class="header-btn" id="minimize-btn">
+						<i class="fas fa-minus"></i>
+					</button>
+					<button class="header-btn close-btn" id="close-btn">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+			</header>
+
+			<div class="screen" id="screen-main">
+				<div class="hero">
+					<img src="icon.ico" alt="LEA" class="hero-logo-img" />
+					<h1 class="hero-title">Law Enforcer<br /><span>Assistant</span></h1>
+					<p class="hero-sub">ТВОЙ ГЛАВНЫЙ ПОМОЩНИК В СИЛОВЫХ СТРУКТУРАХ</p>
+
+					<div class="section">
+						<label class="section-label">Путь к корню игры</label>
+						<div class="path-input-group">
+							<input
+								type="text"
+								id="game-path"
+								class="path-input"
+								placeholder="C:\...\arizona"
+							/>
+							<button class="browse-btn" id="browse-btn">
+								<i class="fas fa-folder-open"></i>
+							</button>
+						</div>
+						<div class="validation" id="validation">
+							<i class="fas fa-info-circle"></i>
+							<span>Выберите корневую папку с gta_sa.exe</span>
+						</div>
+					</div>
+
+					<div class="section">
+						<label class="checkbox">
+							<input type="checkbox" id="agree-terms" />
+							<span class="checkmark"></span>
+							<span class="checkbox-text">
+								Принимаю
+								<a href="https://lea-script.space/eula"
+									>пользовательское соглашение</a
+								>
+								и
+								<a href="https://lea-script.space/rules"
+									>правила использования</a
+								>
+							</span>
+						</label>
+					</div>
+
+					<button class="install-btn" id="install-btn" disabled>
+						<i class="fas fa-download"></i>
+						УСТАНОВИТЬ LEA
+					</button>
+				</div>
+			</div>
+
+			<div class="screen hidden" id="screen-game-running">
+				<div class="warning-screen">
+					<div class="warning-icon">
+						<i class="fas fa-exclamation-triangle"></i>
+					</div>
+					<h2 class="warning-title">Игра <span>запущена!</span></h2>
+					<p class="warning-sub">
+						Обнаружен запущенный процесс <b>gta_sa.exe</b>.<br />
+						Для установки LEA необходимо закрыть игру.
+					</p>
+					<div class="warning-btns">
+						<button class="warn-btn-primary" id="kill-game-btn">
+							<i class="fas fa-power-off"></i>
+							Закрыть игру и продолжить
+						</button>
+						<button class="warn-btn-secondary" id="cancel-install-btn">
+							<i class="fas fa-times"></i>
+							Отмена
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="screen hidden" id="screen-install">
+				<div class="install-screen">
+					<h2 class="install-title">Установка <span>LEA</span></h2>
+
+					<div class="circle-progress-wrap">
+						<svg class="circle-svg" viewBox="0 0 160 160">
+							<circle class="circle-bg" cx="80" cy="80" r="70" />
+							<circle
+								class="circle-glow"
+								id="circle-glow"
+								cx="80"
+								cy="80"
+								r="70"
+							/>
+							<circle
+								class="circle-fill"
+								id="circle-fill"
+								cx="80"
+								cy="80"
+								r="70"
+							/>
+						</svg>
+						<div class="circle-text">
+							<span class="circle-percent" id="progress-percent">0%</span>
+							<span class="circle-label">УСТАНОВКА</span>
+						</div>
+					</div>
+
+					<p class="install-status" id="progress-status">Подготовка...</p>
+				</div>
+			</div>
+
+			<div class="screen hidden" id="screen-done">
+				<div class="done-screen">
+					<div class="done-icon">
+						<i class="fas fa-check"></i>
+					</div>
+					<h2 class="done-title">LEA <span>установлен!</span></h2>
+					<p class="done-sub">Перезапусти игру и наслаждайся</p>
+					<a
+						href="https://discord.gg/4CzJ22VWPz"
+						class="discord-btn"
+						id="discord-btn"
+					>
+						<i class="fab fa-discord"></i>
+						ВСТУПИТЬ В DISCORD
+					</a>
+					<button class="close-done-btn" id="close-done-btn">
+						Закрыть установщик
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
