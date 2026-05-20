@@ -212,14 +212,16 @@ Hidden window mode:
 
 ```text
 .
-├── index.html
-├── styles.css
-├── script.js
-├── src-tauri/
-│   ├── src/
-│   │   └── main.rs
-│   ├── Cargo.toml
-│   └── tauri.conf.json
+├── ui/
+│   ├── index.html
+│   ├── styles.css
+│   └── script.js
+│
+└── src-tauri/
+    ├── src/
+    │   └── main.rs
+    ├── Cargo.toml
+    └── tauri.conf.json
 ```
 
 ---
